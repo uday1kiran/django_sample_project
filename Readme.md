@@ -41,3 +41,13 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 
 
+login to admin page using below user created
+---------
+python manage.py createsuperuser
+http://localhost:8000/admin
+
+add an entry in admin.py for a model to display in admin page
+----
+admin.site.register(Book)
+
+
