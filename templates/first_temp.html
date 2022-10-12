@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>This is my first template</h1>
+    <h2>{{ data }}</h2>
+    <h3>{{ books }}</h3>
+
+    {% for book in books %}
+      {% if book.is_published %}
+        <h3>{{ book.title }}</h3>
+      {% endif %}
+    {% endfor %}
+</body>
+</html>
+

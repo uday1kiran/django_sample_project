@@ -7,6 +7,10 @@ from .models import Book
 def first(request):
     return HttpResponse('First message from Views')
 
+def first1(request):
+    books = Book.objects.all()
+    return render(request, 'first_temp.html', {'data': 'this is a data from views', 'books': books})
+
 def firstfunction(request):
     return HttpResponse('First message from Views')
 

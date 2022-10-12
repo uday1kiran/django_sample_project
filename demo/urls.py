@@ -6,6 +6,7 @@ from .views import Another
 ## to use as <mainurl>/demo
 urlpatterns = [
     path('', views.first),
+    path('first', views.first1),
     path('firstfunction', views.firstfunction),
     path('another', Another.as_view()),
 ]
