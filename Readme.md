@@ -51,5 +51,14 @@ add an entry in admin.py for a model to display in admin page
 admin.site.register(Book)
 
 
+to add support to rest api:
+---
+pip install djangorestframework
+add entry to settings.py INSTALLED_APPS rest_framework
+and then run ... python3 manage.py migrate
+
+
 pycharm shortcuts:
 html5 skeleton - html:5<tab> 
+
+
