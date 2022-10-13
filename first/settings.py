@@ -39,7 +39,18 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'demo',
     'rest_framework',
+'rest_framework.authtoken',
 ]
+
+## to block all pages to login required
+##'rest_framework.permissions.IsAuthenticated',
+## 'rest_framework.permissions.AllowAny', will open all pages and can restrict individual views there
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+'rest_framework.permissions.AllowAny',
+
+    )
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

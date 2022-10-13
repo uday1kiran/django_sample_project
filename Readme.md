@@ -58,6 +58,14 @@ add entry to settings.py INSTALLED_APPS rest_framework
 and then run ... python3 manage.py migrate
 
 
+to add auth token:
+-
+add 'rest_framework.authtoken', to installed_apps of settings.py of project
+and project level urls.py  path('auth/',obtain_auth_token) 
+this will add a token table in admin page.
+http://127.0.0.1:8000/auth/ POST with username and pasword in form-data of body in postman.will create a token.
+Authorization(Token token_value) --> in header of api request in postman.
+
 pycharm shortcuts:
 html5 skeleton - html:5<tab> 
 
