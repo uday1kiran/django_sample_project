@@ -6,7 +6,7 @@ from rest_framework.permissions import IsAuthenticated
 
 from .models import Book
 from rest_framework import viewsets
-from .serializers import BookSerializer
+from .serializers import BookSerializer #, BookMiniSerializer
 
 # Create your views here.
 def first(request):
@@ -37,3 +37,9 @@ class BookViewSet(viewsets.ModelViewSet):
     queryset = Book.objects.all()
     authentication_classes = (TokenAuthentication , )
     permission_classes = (IsAuthenticated,)
+
+# class BookViewSet1(viewsets.ModelViewSet):
+#     serializer_class = BookMiniSerializer
+#     queryset = Book.objects.all()
+#     authentication_classes = (TokenAuthentication , )
+#     permission_classes = (IsAuthenticated,)
